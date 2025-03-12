@@ -33,7 +33,7 @@ function getRandomColor() {
     return `rgb(${Math.random() * 256}, ${Math.random() * 256}, ${Math.random() * 256})`;
 }
 
-const collisionSound = new Audio("colision1.mp3");
+const collisionSound = new Audio("colision.mp3");
 
 class Circle {
     constructor(x, y, radius, speed) {
@@ -121,7 +121,7 @@ document.body.appendChild(generateButton);
 generateButton.addEventListener("click", () => {
     let numCircles = parseInt(inputField.value) || 1;
     for (let i = 0; i < numCircles; i++) {
-        let radius = Math.floor(Math.random() * 30) + 10;
+        let radius = Math.floor(Math.random() * 30) + 9;
         let x = Math.random() * (theCanvas.width - 2 * radius) + radius;
         let y = Math.random() * (theCanvas.height - 2 * radius) + radius;
         let speed = 3;
@@ -150,7 +150,7 @@ pauseButton.addEventListener("click", () => {
 });
 
 theCanvas.addEventListener("click", () => {
-    let radius = Math.floor(Math.random() * 30) + 10;
+    let radius = Math.floor(Math.random() * 30) + 9;
     let x = Math.random() * (theCanvas.width - 2 * radius) + radius;
     let y = Math.random() * (theCanvas.height - 2 * radius) + radius;
     let speed = 3;
